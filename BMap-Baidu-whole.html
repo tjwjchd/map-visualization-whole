@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/bmap.min.js"></script>
+        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ikDcUGDtb60wei2Hnzi8NueIqUSXp7qB"></script>
+        <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=ikDcUGDtb60wei2Hnzi8NueIqUSXp7qB"></script>
+
+</head>
+<style> a {color:red; font-size:38px; position:absolute; left:248px; top:75px;}  </style>
+<body>
+    <div id="87bd7cf40b1d4de083265a38b70ef7b9" class="chart-container" style="width:1200px; height:2250px;"></div>
+    <a href="http://www.pm25.in" target="_blank" rel="noopener noreferrer" >访问空气排名网站 </a>
+    <script>
+        var chart_87bd7cf40b1d4de083265a38b70ef7b9 = echarts.init(
+            document.getElementById('87bd7cf40b1d4de083265a38b70ef7b9'), 'white', {renderer: 'canvas'});
+        var option_87bd7cf40b1d4de083265a38b70ef7b9 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "scatter",
+            "name": "BMap",
+            "coordinateSystem": "bmap",
+            "symbolSize": 100,
+            "data": [
+                {
+                    "name": "\u78a7\u6cc9\u82b1\u56ed\u793e\u533a<br>\u8054\u7cfb\u4eba\uff1aXXX<br>\u8054\u7cfb\u7535\u8bdd:12345678900<br>\u793e\u533a\u8303\u56f4\uff1a\u78a7\u6cc9\u82b1\u56ed\u3001\u6210\u53d1\u82b1\u82d1\u3001\u6210\u53d1\u99a8\u82d1\u3001\u6c34\u5cb8\u534e\u5ead<br>\u80cc\u8857\u5c0f\u5df7\uff1a\u6b23\u6768\u9053\u3001\u5fa1\u6cb3\u9053",
+                    "value": [
+                        117.031178,
+                        39.140916,
+                        4
+                    ]
+                },
+                {
+                    "name": "\u78a7\u6cc9\u82b1\u56ed\u793e\u533a\u65b0\u65f6\u4ee3\u6587\u660e\u5b9e\u8df5\u7ad9",
+                    "value": [
+                        117.030087,
+                        39.141962,
+                        5
+                    ]
+                }
+            ],
+            "label": {
+                "show": false,
+                "position": "right",
+                "margin": 8,
+                "formatter": "{b}"
+            },
+            "itemStyle": {
+                "color": "purple"
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "BMap"
+            ],
+            "selected": {
+                "BMap": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "textStyle": {
+                "fontSize": 20
+            }
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 15000,
+        "position": "inside",
+        "formatter": function(params){return params.data.name;},
+        "textStyle": {
+            "fontSize": 40
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "\u70b9\u4f4d\u5206\u5e03\u56fe\u624b\u673a\u7248",
+            "left": "center",
+            "padding": 5,
+            "itemGap": 10,
+            "textStyle": {
+                "color": "blue",
+                "fontSize": 60
+            },
+            "subtextStyle": {
+                "color": "red",
+                "fontSize": 35
+            }
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "piecewise",
+        "min": 0,
+        "max": 33,
+        "text": [
+            "\u603b\u6570:361"
+        ],
+        "textStyle": {
+            "fontSize": 35
+        },
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ],
+            "opacity": 1
+        },
+        "calculable": true,
+        "inverse": true,
+        "splitNumber": 5,
+        "dimension": 2,
+        "orient": "vertical",
+        "left": "0",
+        "top": "10%",
+        "bottom": "bottom",
+        "showLabel": true,
+        "itemWidth": [
+            50
+        ],
+        "itemHeight": [
+            50
+        ],
+        "borderWidth": 0,
+        "pieces": [
+            {
+                "min": 4,
+                "max": 4,
+                "label": "\u57ce\u5e02\u793e\u533a",
+                "color": "MediumPurple"
+            },
+            {
+                "min": 5,
+                "max": 5,
+                "label": "\u793e\u533a\u65b0\u65f6\u4ee3\u6587\u660e\u5b9e\u8df5\u7ad9",
+                "color": "Aqua"
+            }
+        ]
+    },
+    "bmap": {
+        "center": [
+            117.031178,
+            39.140916
+        ],
+        "zoom": 20,
+        "roam": true
+    }
+};
+        chart_87bd7cf40b1d4de083265a38b70ef7b9.setOption(option_87bd7cf40b1d4de083265a38b70ef7b9);
+            var bmap = chart_87bd7cf40b1d4de083265a38b70ef7b9.getModel().getComponent('bmap').getBMap();
+                    var overview = new BMap.OverviewMapControl({"anchor": 3, "offset": {"width": 10, "height": 50}, "isOpen": true});
+                    bmap.addControl(overview);
+                    bmap.addControl(new BMap.ScaleControl({"anchor": 2, "offset": {"width": 80, "height": 21}}));
+                    bmap.addControl(new BMap.MapTypeControl({"anchor": 1, "type": 0}));
+                    var copyright = new BMap.CopyrightControl({"anchor": 3, "offset": {"width": 2, "height": 2}});
+                    copyright.addCopyright({"id": 1, "content": ""});
+                    bmap.addControl(copyright);
+                    bmap.addControl(new BMap.GeolocationControl({"anchor": 3, "offset": {"width": 10, "height": 10}, "showAddressBar": true, "enableAutoLocation": false}))
+    </script>
+</body>
+</html>
